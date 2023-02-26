@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://musicalbums:5dG2jX2eahQP44BR@cluster0.pmcnovy.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("<MongoDB URL>");
 
 app.post("/album", async (req, res) => {
     const {artist, artwork, genre, title, tracklist, year} = req.body;
